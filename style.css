@@ -9,3 +9,34 @@
 .centered {
   text-align: center;
 }
+
+/* .card {
+  margin: 20px 3%;
+  display: inline-block;
+  width: 27% !important;
+} */
+
+.card {
+  margin: 25px auto !important;
+}
+
+.subheader {
+  margin-left: 50px;
+}
+
+.header {
+  margin: 30px 0;
+}
+
+.btn.active {
+  background: rgb(79, 177, 79) !important;
+  border: none;
+}
+
+.btn.active:hover {
+  background-color: rgb(95, 137, 33) !important;
+}
+
+table {
+  margin: auto;
+}

@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -27,9 +27,9 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Your Info <span class="sr-only">(current)</span></a
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html"
+              >Your Info</a
             >
           </li>
           <li class="nav-item dropdown">
@@ -46,7 +46,7 @@
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="housing/housing.html">Housing</a>
-              <a class="dropdown-item" href="transportation/transport.html">Transportation</a>
+              <a class="dropdown-item" href="#">Transportation</a>
               <a class="dropdown-item" href="#">Grocery</a>
               <a class="dropdown-item" href="#">Entertainment</a>
               <a class="dropdown-item" href="#">Communications</a>
@@ -58,74 +58,34 @@
               <a class="dropdown-item" href="#">Student Materials</a>
               <a class="dropdown-item" href="#">Supplemental Income</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="budget/budget.html">Budget</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Budget<span class="sr-only">(current)</span></a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <h2 class="d-flex justify-content-center" id="info">Welcome To Your Life...</h2>
+    <h2 class="d-flex justify-content-center" id="info">Monthly Budget</h2>
 
     <div class="d-flex justify-content-center" id="info">
         
         <table class="table" id="tableData">
             <tbody>
               <tr>
-                <th scope="row" class="centered">Career</th>
-                <td class="centered" id="career"></td>
+                <th scope="row" class="centered">Monthly Net Income</th>
+                <td class="centered" id="totalIncome"></td>
               </tr>
               <tr>
-                <th scope="row" class="centered">Education</th>
-                <td class="centered" id="education"></td>
+                <th scope="row" class="centered">Housing</th>
+                <td class="centered" id="houseCost"></td>
               </tr>
               <tr>
-                <th scope="row" class="centered">Marital Staus</th>
-                <td class="centered" id="marital"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Children</th>
-                <td class="centered" id="children"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Custody?</th>
-                <td class="centered" id="custody"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Annual Gross Income</th>
-                <td class="centered" id="annualGross"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Monthly Gross Income</th>
-                <td class="centered" id="monthlyGross"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Spouse Income</th>
-                <td class="centered" id="spouseIncome"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Total Monthly Gross Income</th>
-                <td class="centered" id="totalGross"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Taxes</th>
-                <td class="centered" id="taxes"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Subtotal</th>
-                <td class="centered" id="subtotal"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Student Loans</th>
-                <td class="centered" id="loan"></td>
-              </tr>
-              <tr>
-                <th scope="row" class="centered">Child Support</th>
-                <td class="centered" id="childSupport"></td>
+                <th scope="row" class="centered">Transport</th>
+                <td class="centered" id="carCost"></td>
               </tr>
               <tr class="table-success">
-                <th scope="row" class="centered">Monthly Net</th>
-                <th class="centered" id="monthlyNet"></th>
+                <th scope="row" class="centered">Remaining</th>
+                <th class="centered" id="fundsRemaining"></th>
               </tr>
             </tbody>
           </table>
@@ -147,6 +107,6 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"
   ></script>
-  <script src="lifeData.js"></script>
-  <script src="script.js"></script>
+  <script src="../lifeData.js"></script>
+  <script src="budget.js"></script>
 </html>
