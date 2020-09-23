@@ -10,6 +10,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="entertain.css
+    " />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -65,46 +67,67 @@
         </ul>
       </div>
     </nav> 
-    <h2 class="header d-flex justify-content-center">Grocery</h2>
-    <h5 id="groceryStmt" style="text-align: center; margin-bottom: 30px; color: red"></h5>
+    <h2 class="header d-flex justify-content-center">Personal Care and Clothing</h2>
+    <h5 id="personalStmt" style="text-align: center; margin-bottom: 30px; color: red"></h5>
+    <h3 class="header d-flex justify-content-center" style="width: 60%; margin: 20px auto; text-align: center;">Clothing</h3>
 
-    <div class="row">
+        <table class="table table-bordered col-sm-8 table-responsive-sm" style="text-align: center;">
+            <thead>
+              <tr>
+                <th scope="col"></th>
+                <th scope="col">Yard Sales/Consignment</th>
+                <th scope="col">Dollar Store/Big Lots</th>
+                <th scope="col">Discount Store (Walmart)</th>
+                <th scope="col">Mall/Department Store (JC Penny, Aeropostale)</th>
+                <th scope="col">Specialty Store</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>One Adult</td>
+                <td>$60</td>
+                <td>$70</td>
+                <td>$90</td>
+                <td>$140</td>
+                <td>$180</td>
+              </tr>
+              <tr>
+                <td>One Child</td>
+                <td>$20</td>
+                <td>$25</td>
+                <td>$30</td>
+                <td>$45</td>
+                <td>$60</td>
+              </tr>
+            </tbody>
+          </table>
+    <h4 class="header d-flex justify-content-center" style="width: 60%; margin: 20px auto; text-align: center;">Don't forget your personal care items. You will need to purchase things like shampoo and toothpaste along with any other health or beauty needs you may have.</h4>
 
-      <table class="table table-bordered col-sm-8 table-responsive-sm">
+    <table class="table table-bordered col-sm-8 table-responsive-sm" style="text-align: center;">
         <thead>
           <tr>
-            <th scope="col">Age/Gender</th>
-            <th scope="col">Thrifty</th>
-            <th scope="col">Low Cost</th>
-            <th scope="col">Moderate</th>
-            <th scope="col">Liberal</th>
+            <th scope="col">Number of People</th>
+            <th scope="col">Low-Priced Brands & Store-Brands Products (VO5, Suave, Walmart)</th>
+            <th scope="col">Mid Priced Brands (Herbal Essence, Crest, Pantene)</th>
+            <th scope="col">High End Name Brands & Salon Brands (Bed Head, Paul Mitchell, Redken)</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row" class="adult">Adult</th>
-            <td>$165</td>
-            <td>$184</td>
-            <td>$235</td>
-            <td>$289</td>
+            <td>1-2</td>
+            <td>$12</td>
+            <td>$18</td>
+            <td>$27</td>
           </tr>
           <tr>
-            <th scope="row" class="childOver1">Child under 1 year</th>
-            <td>$86</td>
-            <td>$114</td>
-            <td>$131</td>
-            <td>$160</td>
-          </tr>
-          <tr>
-            <th scope="row" class="childUnder1">Child over 1 year</th>
-            <td>$90</td>
-            <td>$114</td>
-            <td>$138</td>
-            <td>$168</td>
+            <td>3-5</td>
+            <td>$25</td>
+            <td>$37</td>
+            <td>$54</td>
           </tr>
         </tbody>
       </table>
-    </div>
+
     <h2 class="header d-flex justify-content-center">Order Form</h2>
     <form id="orderGroceries">
         <!-- <div class="form-group">
@@ -112,25 +135,20 @@
           <input class="form-control" type="number" min="0" step="1" id="foodCost">
         </div> -->
         <div class="mb-3">
-            <label for="validationCustom05">Total Monthly Grocery Cost</label>
-            <input type="text" class="form-control" id="foodCost" placeholder="Enter a valid integer" required>
+            <label for="validationCustom05">Total Monthly Clothing Cost</label>
+            <input type="text" class="form-control" id="clothCost" placeholder="Enter a valid integer" required>
             <!-- <div class="invalid-feedback">
               Total Grocery Cost
             </div> -->
           </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">How many people are you feeding?</label>
-          <select class="form-control" id="pplFeeding">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-          </select>
-        </div>
-        <button type="button" class="btn btn-primary" onclick=buyFood()>Submit</button>
+          <div class="mb-3">
+            <label for="validationCustom05">Total Monthly Personal Care Cost</label>
+            <input type="text" class="form-control" id="careCost" placeholder="Enter a valid integer" required>
+            <!-- <div class="invalid-feedback">
+              Total Grocery Cost
+            </div> -->
+          </div>
+        <button type="button" class="btn btn-primary" onclick=buyPersonal()>Submit</button>
       </form>
 </div>
   </body>
@@ -152,5 +170,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="../lifeData.js"></script>
-  <script src="grocery.js"></script>
+  <script src="personal.js"></script>
 </html>

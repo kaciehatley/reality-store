@@ -10,6 +10,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="entertain.css
+    " />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -65,46 +67,87 @@
         </ul>
       </div>
     </nav> 
-    <h2 class="header d-flex justify-content-center">Grocery</h2>
-    <h5 id="groceryStmt" style="text-align: center; margin-bottom: 30px; color: red"></h5>
+    <h2 class="header d-flex justify-content-center">Insurance</h2>
+    <h5 id="insuranceStmt" style="text-align: center; margin-bottom: 30px; color: red"></h5>
+    <h4 class="header d-flex justify-content-center" style="width: 60%; margin: 20px auto; text-align: center;">Premium payments for students who have health
+        insurance benefits provided by their or their
+        spouse’s employer.</h4>
 
-    <div class="row">
+        <table class="table table-bordered col-sm-8 table-responsive-sm" style="text-align: center;">
+            <thead>
+              <tr>
+                <th scope="col">Coverage Options</th>
+                <th scope="col">Single</th>
+                <th scope="col">Married</th>
+                <th scope="col">Family</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Medical ($500 Deductible)</td>
+                <td>$40</td>
+                <td>$100</td>
+                <td>$175</td>
+              </tr>
+              <tr>
+                <td>Medical ($1500 Deductible)</td>
+                <td>$35</td>
+                <td>$72</td>
+                <td>$140</td>
+              </tr>
+              <tr>
+                <td>Dental Coverage</td>
+                <td>$28</td>
+                <td>$41</td>
+                <td>$55</td>
+              </tr>
+              <tr>
+                <td>Vision Coverage</td>
+                <td>$20</td>
+                <td>$40</td>
+                <td>$60</td>
+              </tr>
+            </tbody>
+          </table>
+    <h4 class="header d-flex justify-content-center" style="width: 60%; margin: 20px auto; text-align: center;">Premium payments for students who DO NOT have health insurance benefits provided by their or their spouse’s employer. This is insurance that they may purchase on their own if they wish to. </h4>
 
-      <table class="table table-bordered col-sm-8 table-responsive-sm">
+    <table class="table table-bordered col-sm-8 table-responsive-sm" style="text-align: center;">
         <thead>
           <tr>
-            <th scope="col">Age/Gender</th>
-            <th scope="col">Thrifty</th>
-            <th scope="col">Low Cost</th>
-            <th scope="col">Moderate</th>
-            <th scope="col">Liberal</th>
+            <th scope="col">Coverage Options</th>
+            <th scope="col">Single</th>
+            <th scope="col">Married</th>
+            <th scope="col">Family</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row" class="adult">Adult</th>
-            <td>$165</td>
-            <td>$184</td>
-            <td>$235</td>
-            <td>$289</td>
+            <td>Medical ($500 Deductible)</td>
+            <td>$80</td>
+            <td>$200</td>
+            <td>$350</td>
           </tr>
           <tr>
-            <th scope="row" class="childOver1">Child under 1 year</th>
-            <td>$86</td>
-            <td>$114</td>
-            <td>$131</td>
-            <td>$160</td>
+            <td>Medical ($1500 Deductible)</td>
+            <td>$70</td>
+            <td>$144</td>
+            <td>$280</td>
           </tr>
           <tr>
-            <th scope="row" class="childUnder1">Child over 1 year</th>
-            <td>$90</td>
-            <td>$114</td>
-            <td>$138</td>
-            <td>$168</td>
+            <td>Dental Coverage</td>
+            <td>$56</td>
+            <td>$82</td>
+            <td>$110</td>
+          </tr>
+          <tr>
+            <td>Vision Coverage</td>
+            <td>$40</td>
+            <td>$80</td>
+            <td>$120</td>
           </tr>
         </tbody>
       </table>
-    </div>
+
     <h2 class="header d-flex justify-content-center">Order Form</h2>
     <form id="orderGroceries">
         <!-- <div class="form-group">
@@ -112,25 +155,13 @@
           <input class="form-control" type="number" min="0" step="1" id="foodCost">
         </div> -->
         <div class="mb-3">
-            <label for="validationCustom05">Total Monthly Grocery Cost</label>
-            <input type="text" class="form-control" id="foodCost" placeholder="Enter a valid integer" required>
+            <label for="validationCustom05">Total Monthly Insurance Cost</label>
+            <input type="text" class="form-control" id="insCost" placeholder="Enter a valid integer" required>
             <!-- <div class="invalid-feedback">
               Total Grocery Cost
             </div> -->
           </div>
-        <div class="form-group">
-          <label for="exampleFormControlSelect1">How many people are you feeding?</label>
-          <select class="form-control" id="pplFeeding">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-          </select>
-        </div>
-        <button type="button" class="btn btn-primary" onclick=buyFood()>Submit</button>
+        <button type="button" class="btn btn-primary" onclick=buyInsurance()>Submit</button>
       </form>
 </div>
   </body>
@@ -152,5 +183,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="../lifeData.js"></script>
-  <script src="grocery.js"></script>
+  <script src="insurance.js"></script>
 </html>

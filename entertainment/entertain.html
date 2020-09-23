@@ -10,6 +10,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="entertain.css
+    " />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -65,42 +67,68 @@
         </ul>
       </div>
     </nav> 
-    <h2 class="header d-flex justify-content-center">Grocery</h2>
-    <h5 id="groceryStmt" style="text-align: center; margin-bottom: 30px; color: red"></h5>
+    <h2 class="header d-flex justify-content-center">Entertainment</h2>
+    <h5 id="entertainStmt" style="text-align: center; margin-bottom: 30px; color: red"></h5>
 
     <div class="row">
 
-      <table class="table table-bordered col-sm-8 table-responsive-sm">
+      <table class="table table-bordered col-sm-8 table-responsive-sm" style="text-align: center;">
         <thead>
           <tr>
-            <th scope="col">Age/Gender</th>
-            <th scope="col">Thrifty</th>
-            <th scope="col">Low Cost</th>
+            <th scope="col">Economy</th>
+            <th scope="col">Value</th>
             <th scope="col">Moderate</th>
-            <th scope="col">Liberal</th>
+            <th scope="col">No Limits</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row" class="adult">Adult</th>
-            <td>$165</td>
-            <td>$184</td>
-            <td>$235</td>
-            <td>$289</td>
+            <td>2 Fast Food Trips</td>
+            <td>Economy+</td>
+            <td>Economy and Value+</td>
+            <td>Everything! Plus...</td>
           </tr>
           <tr>
-            <th scope="row" class="childOver1">Child under 1 year</th>
-            <td>$86</td>
-            <td>$114</td>
-            <td>$131</td>
-            <td>$160</td>
+            <td>1 Restaurant Trip</td>
+            <td>2 Fast Food Trips</td>
+            <td>6 Fast Food Trips</td>
+            <td>Cruise</td>
           </tr>
           <tr>
-            <th scope="row" class="childUnder1">Child over 1 year</th>
-            <td>$90</td>
-            <td>$114</td>
-            <td>$138</td>
-            <td>$168</td>
+            <td>2 Movie Rentals</td>
+            <td>1 Restaurant Trip</td>
+            <td>4 Restaurants Trip</td>
+            <td>2 Weeks Vacation</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>1 Movie Night</td>
+            <td>2 Movie Nights</td>
+            <td>3 Theme Park Trips</td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>1 Day Trip Vacation</td>
+            <td>1 Week Vacation</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="blue">$37.00 for the head of household</td>
+            <td class="green">$72.00 for the head of household</td>
+            <td class="yellow">$247.00 for the head of household</td>
+            <td class="red">$497.00 for the head of household</td>
+          </tr>
+          <tr>
+            <td class="blue">$27.00 for each additional person ages 12 & up</td>
+            <td class="green">$62.00 for each additional person ages 12 & up</td>
+            <td class="yellow">$162.00 for each additional person ages 12 & up</td>
+            <td class="red">$412.00 for each additional person ages 12 & up</td>
+          </tr>
+          <tr>
+            <td class="blue">$20.00 for each additional person ages 11 & under</td>
+            <td class="green">$47.00 for each additional person ages 11 & under</td>
+            <td class="yellow">$147.00 for each additional person ages 11 & under</td>
+            <td class="red">$397.00 for each additional person ages 11 & under</td>
           </tr>
         </tbody>
       </table>
@@ -112,25 +140,34 @@
           <input class="form-control" type="number" min="0" step="1" id="foodCost">
         </div> -->
         <div class="mb-3">
-            <label for="validationCustom05">Total Monthly Grocery Cost</label>
-            <input type="text" class="form-control" id="foodCost" placeholder="Enter a valid integer" required>
+            <label for="validationCustom05">Total Monthly Entertainment Cost</label>
+            <input type="text" class="form-control" id="entertainCost" placeholder="Enter a valid integer" required>
             <!-- <div class="invalid-feedback">
               Total Grocery Cost
             </div> -->
           </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">How many people are you feeding?</label>
-          <select class="form-control" id="pplFeeding">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
+          <label for="exampleFormControlSelect1">Which entertainment package are you purchasing?</label>
+          <select class="form-control" id="package">
+            <option>Economy</option>
+            <option>Value</option>
+            <option>Moderate</option>
+            <option>No Limits</option>
           </select>
         </div>
-        <button type="button" class="btn btn-primary" onclick=buyFood()>Submit</button>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">For how many people?</label>
+            <select class="form-control" id="numPpl">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+            </select>
+          </div>
+        <button type="button" class="btn btn-primary" onclick=buyPackage()>Submit</button>
       </form>
 </div>
   </body>
@@ -152,5 +189,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="../lifeData.js"></script>
-  <script src="grocery.js"></script>
+  <script src="entertain.js"></script>
 </html>

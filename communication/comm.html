@@ -10,6 +10,8 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
     <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="entertain.css
+    " />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -65,42 +67,71 @@
         </ul>
       </div>
     </nav> 
-    <h2 class="header d-flex justify-content-center">Grocery</h2>
-    <h5 id="groceryStmt" style="text-align: center; margin-bottom: 30px; color: red"></h5>
+    <h2 class="header d-flex justify-content-center">Communications</h2>
+    <h5 id="commStmt" style="text-align: center; margin-bottom: 30px; color: red"></h5>
+    <div class="row" style="width: 60%; margin: auto">
+        <div class="col-sm-2">
+            <img src="../images/sprint.jpg" alt="" style="width: 50px; float: right;">
+        </div>
+        <div class="col-sm-10">
+            <h2>Sprint</h2>
+            <p>Sprint is cheaper, but you will have terrible reception everywhere.</p>
+        </div>
+    </div>
+    <div class="row" style="width: 60%; margin: auto">
+        <div class="col-sm-2">
+            <img src="../images/uscell.png" alt="" style="width: 120px; float: right;">
+        </div>
+        <div class="col-sm-10">
+            <h2>U.S. Cellular</h2>
+            <p>U.S. Cellular has better signal, but less phone options. For example, they won't have the iPhone 11 Pro, they are still on iPhone X.</p>
+        </div>
+    </div>
 
+    <div class="row" style="width: 60%; margin: auto; margin-bottom: 50px;">
+        <div class="col-sm-2">
+            <img src="../images/verizon.jpg" alt="" style="width: 100px; float: right;">
+        </div>
+        <div class="col-sm-10">
+            <h2>Verizon</h2>
+            <p>Verizon has great signal and a good selection of phones.</p>
+        </div>
+    </div>
+
+    <h4 style="margin: auto; width: 60%; text-align: center; margin-bottom: 30px; color: red">All plans have unlimited talk. Prices are per person. Don't forget to think about whether or not your job would require you to have a data phone!</h4>
     <div class="row">
 
-      <table class="table table-bordered col-sm-8 table-responsive-sm">
+      <table class="table table-bordered col-sm-8 table-responsive-sm" style="text-align: center;">
         <thead>
           <tr>
-            <th scope="col">Age/Gender</th>
-            <th scope="col">Thrifty</th>
-            <th scope="col">Low Cost</th>
-            <th scope="col">Moderate</th>
-            <th scope="col">Liberal</th>
+            <th scope="col">Carriers</th>
+            <th scope="col">Unlimited Everything</th>
+            <th scope="col">5 GB of Data & Unlimited Text</th>
+            <th scope="col">2 GB of Data & 500 Texts/Month</th>
+            <th scope="col">No Data & 100 Texts/Month</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <th scope="row" class="adult">Adult</th>
-            <td>$165</td>
-            <td>$184</td>
-            <td>$235</td>
-            <td>$289</td>
+            <td>Sprint</td>
+            <td>$60</td>
+            <td>$50</td>
+            <td>$40</td>
+            <td>$30</td>
           </tr>
           <tr>
-            <th scope="row" class="childOver1">Child under 1 year</th>
-            <td>$86</td>
-            <td>$114</td>
-            <td>$131</td>
-            <td>$160</td>
+            <td>U.S. Cellular</td>
+            <td>$70</td>
+            <td>$60</td>
+            <td>$50</td>
+            <td>$40</td>
           </tr>
           <tr>
-            <th scope="row" class="childUnder1">Child over 1 year</th>
-            <td>$90</td>
-            <td>$114</td>
-            <td>$138</td>
-            <td>$168</td>
+            <td>Verizon</td>
+            <td>$80</td>
+            <td>$70</td>
+            <td>$60</td>
+            <td>$50</td>
           </tr>
         </tbody>
       </table>
@@ -112,15 +143,15 @@
           <input class="form-control" type="number" min="0" step="1" id="foodCost">
         </div> -->
         <div class="mb-3">
-            <label for="validationCustom05">Total Monthly Grocery Cost</label>
-            <input type="text" class="form-control" id="foodCost" placeholder="Enter a valid integer" required>
+            <label for="validationCustom05">Total Monthly Communications Cost</label>
+            <input type="text" class="form-control" id="commCost" placeholder="Enter a valid integer" required>
             <!-- <div class="invalid-feedback">
               Total Grocery Cost
             </div> -->
           </div>
         <div class="form-group">
-          <label for="exampleFormControlSelect1">How many people are you feeding?</label>
-          <select class="form-control" id="pplFeeding">
+          <label for="exampleFormControlSelect1">How many lines are you purchasing?</label>
+          <select class="form-control" id="numLines">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -130,7 +161,7 @@
             <option>7</option>
           </select>
         </div>
-        <button type="button" class="btn btn-primary" onclick=buyFood()>Submit</button>
+        <button type="button" class="btn btn-primary" onclick=buyPhones()>Submit</button>
       </form>
 </div>
   </body>
@@ -152,5 +183,5 @@
     crossorigin="anonymous"
   ></script>
   <script src="../lifeData.js"></script>
-  <script src="grocery.js"></script>
+  <script src="comm.js"></script>
 </html>

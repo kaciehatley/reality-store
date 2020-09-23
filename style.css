@@ -40,3 +40,18 @@
 table {
   margin: auto;
 }
+
+.counter {
+  margin-left: 18px;
+  width: 60px;
+  display: inline-block;
+}
+
+.groceryBtn {
+  margin: auto !important;
+}
+
+#orderGroceries {
+  margin: auto !important;
+  width: 60% !important;
+}

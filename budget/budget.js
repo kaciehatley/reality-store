@@ -1,6 +1,13 @@
 let number = localStorage.getItem("number");
 let houseID = localStorage.getItem("house");
 let carID = localStorage.getItem("car");
+let groceryCost = localStorage.getItem("groceryCost");
+let familyMembers = localStorage.getItem("familyMembers");
+let entertains = localStorage.getItem("entertainCost");
+let entertainPkg = localStorage.getItem("package");
+let comm = localStorage.getItem("commCost");
+let lines = localStorage.getItem("numLines");
+let ins = localStorage.getItem("ins");
 
 let house = housingOptions[houseID];
 let car = transportOptions[carID];
@@ -9,16 +16,29 @@ let totalIncome = document.getElementById("totalIncome");
 
 let houseCost = document.getElementById("houseCost");
 let carCost = document.getElementById("carCost");
+let foodCost = document.getElementById("foodCost");
+let entertainCost = document.getElementById("entertainCost");
+let commCost = document.getElementById("commCost");
+let insCost = document.getElementById("insCost");
 
 let housePymt = 0;
 let carPymt = 0;
+let foodPymt = 0;
+let entertainPymt = 0;
 
 function numberWithCommas(x) {
   return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 function calculate() {
-  let remaining = data[number].monthlyNet - housePymt - carPymt;
+  let remaining =
+    data[number].monthlyNet -
+    housePymt -
+    carPymt -
+    foodPymt -
+    entertainPymt -
+    comm -
+    ins;
   document.getElementById("fundsRemaining").innerHTML =
     "$" + numberWithCommas(remaining);
 }
@@ -38,6 +58,31 @@ window.onload = function () {
   if (car) {
     carCost.innerHTML = "- $" + numberWithCommas(car.total);
     carPymt = car.total;
+  }
+  if (groceryCost) {
+    foodCost.innerHTML =
+      "- $" +
+      numberWithCommas(groceryCost) +
+      " for a family of " +
+      familyMembers;
+    foodPymt = groceryCost;
+    console.log(foodPymt);
+  }
+  if (entertains) {
+    entertainCost.innerHTML =
+      "- $" +
+      numberWithCommas(entertains) +
+      " for the " +
+      entertainPkg +
+      " package";
+    entertainPymt = entertains;
+  }
+  if (commCost) {
+    commCost.innerHTML =
+      "- $" + numberWithCommas(comm) + " for " + lines + " phone lines.";
+  }
+  if (ins) {
+    insCost.innerHTML = "- $" + numberWithCommas(ins);
   }
   calculate();
 };
