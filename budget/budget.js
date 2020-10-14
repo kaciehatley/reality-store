@@ -8,6 +8,8 @@ let entertainPkg = localStorage.getItem("package");
 let comm = localStorage.getItem("commCost");
 let lines = localStorage.getItem("numLines");
 let ins = localStorage.getItem("ins");
+let clothes = localStorage.getItem("clothes");
+let personalCare = localStorage.getItem("personalCare");
 
 let house = housingOptions[houseID];
 let car = transportOptions[carID];
@@ -20,6 +22,8 @@ let foodCost = document.getElementById("foodCost");
 let entertainCost = document.getElementById("entertainCost");
 let commCost = document.getElementById("commCost");
 let insCost = document.getElementById("insCost");
+let clothCost = document.getElementById("clothCost");
+let careCost = document.getElementById("careCost");
 
 let housePymt = 0;
 let carPymt = 0;
@@ -27,7 +31,9 @@ let foodPymt = 0;
 let entertainPymt = 0;
 
 function numberWithCommas(x) {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  if (x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
 }
 
 function calculate() {
@@ -38,7 +44,9 @@ function calculate() {
     foodPymt -
     entertainPymt -
     comm -
-    ins;
+    ins -
+    clothes -
+    personalCare;
   document.getElementById("fundsRemaining").innerHTML =
     "$" + numberWithCommas(remaining);
 }
@@ -77,12 +85,18 @@ window.onload = function () {
       " package";
     entertainPymt = entertains;
   }
-  if (commCost) {
+  if (comm) {
     commCost.innerHTML =
       "- $" + numberWithCommas(comm) + " for " + lines + " phone lines.";
   }
   if (ins) {
     insCost.innerHTML = "- $" + numberWithCommas(ins);
+  }
+  if (clothes) {
+    clothCost.innerHTML = "- $" + numberWithCommas(clothes);
+  }
+  if (personalCare) {
+    careCost.innerHTML = "- $" + numberWithCommas(personalCare);
   }
   calculate();
 };
