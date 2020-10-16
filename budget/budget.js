@@ -59,12 +59,12 @@ function calculate() {
 
 window.onload = function () {
   totalIncome.innerHTML = "$" + numberWithCommas(data[number].monthlyNet);
-  if (house.type === "apartment") {
+  if (house && house.type === "apartment") {
     houseCost.innerHTML =
       "- $" + numberWithCommas(housingOptions[houseID].rent);
     housePymt = housingOptions[houseID].rent;
   }
-  if (house.type === "house") {
+  if (house && house.type === "house") {
     houseCost.innerHTML =
       "- $" + numberWithCommas(housingOptions[houseID].mortgage);
     housePymt = housingOptions[houseID].mortgage;
