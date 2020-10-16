@@ -3,7 +3,6 @@ let forSale = [];
 
 housingOptions.map((house) => {
   if (house.type == "apartment") {
-    console.log("yup");
     rentals.push(house);
     console.log(rentals);
   }

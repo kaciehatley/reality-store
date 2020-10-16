@@ -10,6 +10,8 @@ let lines = localStorage.getItem("numLines");
 let ins = localStorage.getItem("ins");
 let clothes = localStorage.getItem("clothes");
 let personalCare = localStorage.getItem("personalCare");
+let furniture = localStorage.getItem("furniture");
+let utilities = localStorage.getItem("utilities");
 
 let house = housingOptions[houseID];
 let car = transportOptions[carID];
@@ -24,6 +26,8 @@ let commCost = document.getElementById("commCost");
 let insCost = document.getElementById("insCost");
 let clothCost = document.getElementById("clothCost");
 let careCost = document.getElementById("careCost");
+let furnCost = document.getElementById("furnCost");
+let utilCost = document.getElementById("utilCost");
 
 let housePymt = 0;
 let carPymt = 0;
@@ -46,7 +50,9 @@ function calculate() {
     comm -
     ins -
     clothes -
-    personalCare;
+    personalCare -
+    furniture -
+    utilities;
   document.getElementById("fundsRemaining").innerHTML =
     "$" + numberWithCommas(remaining);
 }
@@ -97,6 +103,12 @@ window.onload = function () {
   }
   if (personalCare) {
     careCost.innerHTML = "- $" + numberWithCommas(personalCare);
+  }
+  if (furniture) {
+    furnCost.innerHTML = "- $" + numberWithCommas(furniture);
+  }
+  if (utilities) {
+    utilCost.innerHTML = "- $" + numberWithCommas(utilities);
   }
   calculate();
 };

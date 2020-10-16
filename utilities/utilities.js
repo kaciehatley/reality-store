@@ -1,8 +1,7 @@
 window.onload = function () {
-  let furniture = localStorage.getItem("furniture");
-  console.log(furniture);
-  if (furniture) {
-    let element = document.getElementById(furniture);
+  let utilities = localStorage.getItem("utilities");
+  if (utilities) {
+    let element = document.getElementById(utilities);
     element.innerHTML = "Purchased!";
     element.classList.add("active");
   }
@@ -10,8 +9,8 @@ window.onload = function () {
 
 document.addEventListener("click", function (event) {
   if (event.target.value > 0) {
-    let furnitureCost = event.target.value;
-    localStorage.setItem("furniture", furnitureCost);
+    let utilCost = event.target.value;
+    localStorage.setItem("utilities", utilCost);
     window.location.reload();
   }
 });
